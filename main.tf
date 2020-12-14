@@ -40,7 +40,7 @@ resource "aws_security_group_rule" "https_ingress" {
 
 module "access_logs" {
   # use this fork until they support terraform 0.14.x
-  source                             = "git::https://github.com/dknell/terraform-aws-lb-s3-bucket"
+  source                             = "github.com/dknell/terraform-aws-lb-s3-bucket"
   # source                             = "git::https://github.com/cloudposse/terraform-aws-lb-s3-bucket.git?ref=tags/0.9.0"
   enabled                            = module.this.enabled && var.access_logs_enabled
   name                               = module.this.name
