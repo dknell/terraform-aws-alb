@@ -84,7 +84,7 @@ resource "aws_lb" "default" {
 }
 
 module "default_target_group_label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
+  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.22.0"
   attributes = concat(module.this.attributes, ["default"])
   context    = module.this.context
 }
